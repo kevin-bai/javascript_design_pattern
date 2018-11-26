@@ -1,13 +1,4 @@
-class Person {
-    constructor(name){
-        this.name = name
-    }
-
-    getName(){
-        return this.name;
-    }
+function readonly(target, name, descriptor) {
+    descriptor.writable = false;
+    return descriptor
 }
-
-let p = new Person('huang');
-
-alert(p.getName())
